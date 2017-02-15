@@ -1,15 +1,17 @@
 package it.ariadne.gangoffive.model;
 
-public class Car{
+public class Car implements Resource{
 	
 	private String brand;
 	private String model;
 	private int seats;
 	private String displacemnt;
+	private String id;
 	
 	
-	public Car(String brand, String model, int seats, String displacemnt) {
+	public Car(String id,String brand, String model, int seats, String displacemnt) {
 		super();
+		this.id=id;
 		this.brand = brand;
 		this.model = model;
 		this.seats = seats;
@@ -38,6 +40,13 @@ public class Car{
 	}
 	public void setDisplacemnt(String displacemnt) {
 		this.displacemnt = displacemnt;
+	}
+	public String getId() {
+		return id;
+	}
+	public String filter() {
+		
+		return "SELECT * FROM WHERE";//da modificare una volta inserito il DB
 	}
 	
 	
